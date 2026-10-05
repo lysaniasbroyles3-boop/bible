@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOBOS Bible Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✝ BOBOS Bible Study</div>
+
+    <nav>
+        <button data-page="home">Home</button>
+        <button data-page="study">Bible Study</button>
+        <button data-page="verses">Verse Lookup</button>
+        <button data-page="progress">Progress</button>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <h1>Grow Your Faith</h1>
+            <p>Read God's Word, answer questions, and build your Bible knowledge.</p>
+
+            <button class="primary" data-page="study">
+                Start Today's Study
+            </button>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <span>📖</span>
+                <h2>Daily Study</h2>
+                <p>Read today's Bible passage and learn something new.</p>
+                <button data-page="study">Start Study</button>
+            </div>
+
+            <div class="card">
+                <span>🔎</span>
+                <h2>Verse Lookup</h2>
+                <p>Search for Bible verses by book and chapter.</p>
+                <button data-page="verses">Look Up a Verse</button>
+            </div>
+
+            <div class="card">
+                <span>⭐</span>
+                <h2>Your Progress</h2>
+                <p>See your level and completed studies.</p>
+                <button data-page="progress">View Progress</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- BIBLE STUDY -->
+    <section id="study" class="page">
+
+        <div class="page-header">
+            <h1>📖 Today's Bible Study</h1>
+            <p>Read the passage, then answer the questions.</p>
+        </div>
+
+        <div class="verse-box">
+            <div class="reference">Proverbs 3:5-6</div>
+
+            <p>
+                Trust in the Lord with all your heart and do not lean on
+                your own understanding. In all your ways acknowledge him,
+                and he will make your paths straight.
+            </p>
+        </div>
+
+        <h2>📝 Questions</h2>
+
+        <form id="quiz">
+
+            <div class="question">
+                <h3>1. Who should we trust?</h3>
+
+                <label>
+                    <input type="radio" name="q1" value="correct">
+                    The Lord
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="wrong">
+                    Only ourselves
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="wrong">
+                    Nobody
+                </label>
+            </div>
+
+            <div class="question">
+                <h3>2. What should we not lean on?</h3>
+
+                <label>
+                    <input type="radio" name="q2" value="wrong">
+                    God's Word
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="correct">
+                    Our own understanding
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="wrong">
+                    Prayer
+                </label>
+            </div>
+
+            <div class="question">
+                <h3>3. What happens when we acknowledge God?</h3>
+
+                <label>
+                    <input type="radio" name="q3" value="correct">
+                    He will make our paths straight.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="wrong">
+                    We never have problems.
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="wrong">
+                    Nothing changes.
+                </label>
+            </div>
+
+            <button class="primary" type="submit">
+                Complete Study
+            </button>
+
+        </form>
+
+        <div id="quizResult" class="result"></div>
+
+    </section>
+
+
+    <!-- VERSE LOOKUP -->
+    <section id="verses" class="page">
+
+        <div class="page-header">
+            <h1>🔎 Verse Lookup</h1>
+            <p>Search the Bible by reference.</p>
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="verseSearch"
+                placeholder="Try John 3:16"
+            >
+
+            <button id="searchVerse" class="primary">
+                Search
+            </button>
+
+        </div>
+
+        <div class="quick-verses">
+            <button data-verse="John 3:16">John 3:16</button>
+            <button data-verse="Proverbs 3:5">Proverbs 3:5</button>
+            <button data-verse="Philippians 4:13">Philippians 4:13</button>
+            <button data-verse="Psalm 23:1">Psalm 23:1</button>
+        </div>
+
+        <div id="verseResult" class="verse-result">
+            <h2>📖 Search for a verse</h2>
+            <p>Enter a Bible reference above.</p>
+        </div>
+
+    </section>
+
+
+    <!-- PROGRESS -->
+    <section id="progress" class="page">
+
+        <div class="page-header">
+            <h1>⭐ Your Progress</h1>
+            <p>Keep studying and grow your Bible knowledge.</p>
+        </div>
+
+        <div class="progress-card">
+
+            <div class="level">
+                <span>Current Level</span>
+                <strong id="level">1</strong>
+            </div>
+
+            <div class="stat">
+                <span>Studies Completed</span>
+                <strong id="completed">0</strong>
+            </div>
+
+            <div class="xp">
+                <span>XP</span>
+                <strong id="xp">0</strong>
+            </div>
+
+        </div>
+
+        <button class="primary" data-page="study">
+            Continue Studying
+        </button>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>✝ BOBOS Bible Study • Grow in God's Word</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
